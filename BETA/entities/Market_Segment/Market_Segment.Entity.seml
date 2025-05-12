@@ -1,0 +1,26 @@
+_package: entities.Market_Segment
+_type: Entity
+_name: Market_Segment
+label: Market_Segment
+pluralLabel: Market_Segment
+entityType: BASIC
+physicalTableName: MARKET_SEGMENT
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: Market_SegmentID
+    label: Market_Segment ID
+    physicalName: MARKET_SEGMENT_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Market_Segment.Market_Segment.Market_SegmentID

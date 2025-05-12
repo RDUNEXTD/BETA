@@ -1,0 +1,5 @@
+_type: Model
+_name: BETA
+label: BETA
+modelConfiguration:
+  type: POSTGRESQL

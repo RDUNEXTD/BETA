@@ -1,0 +1,26 @@
+_package: entities.BusinessUnit
+_type: Entity
+_name: BusinessUnit
+label: Business Unit
+pluralLabel: Business Unit
+entityType: BASIC
+physicalTableName: BUSINESS_UNIT
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: BusinessUnitID
+    label: Business Unit ID
+    physicalName: BUSINESS_UNIT_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.BusinessUnit.BusinessUnit.BusinessUnitID

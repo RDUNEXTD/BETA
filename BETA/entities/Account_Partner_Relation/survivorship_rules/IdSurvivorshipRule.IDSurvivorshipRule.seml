@@ -1,0 +1,10 @@
+_package: entities.Account_Partner_Relation.survivorship_rules
+_type: IDSurvivorshipRule
+_name: IdSurvivorshipRule
+entity: entities.Account_Partner_Relation.Account_Partner_Relation
+label: Id Survivorship Rule
+description: ""
+documentation: ""
+consolidationStrategy: CUSTOM_RANKING
+consolidationOrderByExpression: ""
+consolidationSkipNulls: false

@@ -1,0 +1,26 @@
+_package: entities.Customer_Account_Group
+_type: Entity
+_name: Customer_Account_Group
+label: Customer_Account_Group
+pluralLabel: Customer_Account_Group
+entityType: BASIC
+physicalTableName: CUSTOMER_ACCOUNT_GROUP
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: Customer_Account_GroupID
+    label: Customer_Account_Group ID
+    physicalName: CUSTOMER_ACCOUNT_GROUP_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Customer_Account_Group.Customer_Account_Group.Customer_Account_GroupID

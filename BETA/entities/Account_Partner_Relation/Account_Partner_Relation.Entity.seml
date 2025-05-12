@@ -1,0 +1,50 @@
+_package: entities.Account_Partner_Relation
+_type: Entity
+_name: Account_Partner_Relation
+label: Account_Partner_Relation
+pluralLabel: Account_Partner_Relation
+entityType: FUZZY_MATCHED
+physicalTableName: ACCOUNT_PARTNER_RELATION
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: Account_Partner_RelationID
+    label: Account_Partner_Relation ID
+    physicalName: ACCOUNT_PARTNER_RELATION_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Account_Partner_Relation.Account_Partner_Relation.Account_Partner_RelationID
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+matcher:
+  _type: SemQLMatcher
+  description: Account_Partner_RelationSemQLMatcher
+  matchRules:
+    - _type: SemQLMatchRule
+      _name: NewRule
+      label: NewRuleLabel
+      condition:
+      matchScore: 100
+      usingMatchOn: false
+  useTransitiveMatchScore: true
+  useMultiIterationGrouping: true
+  mergeThresholdNewGroup: 0
+  mergeThresholdMergingUnconfirmed: 0
+  mergeThresholdMergingConfirmed: 0
+  mergeThresholdMergingConfirmedWithUnconfirmed: 0
+  mergeThresholdMergingUnconfirmedWithNewMasters: 0
+  mergeThresholdMergingConfirmedWithNewMasters: 0
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false

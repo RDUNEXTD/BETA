@@ -1,0 +1,50 @@
+_package: entities.Account_tax_code
+_type: Entity
+_name: Account_tax_code
+label: Account_tax_code
+pluralLabel: Account_tax_code
+entityType: FUZZY_MATCHED
+physicalTableName: ACCOUNT_TAX_CODE
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: Account_tax_codeID
+    label: Account_tax_code ID
+    physicalName: ACCOUNT_TAX_CODE_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Account_tax_code.Account_tax_code.Account_tax_codeID
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+matcher:
+  _type: SemQLMatcher
+  description: Account_tax_codeSemQLMatcher
+  matchRules:
+    - _type: SemQLMatchRule
+      _name: NewRule
+      label: NewRuleLabel
+      condition:
+      matchScore: 100
+      usingMatchOn: false
+  useTransitiveMatchScore: true
+  useMultiIterationGrouping: true
+  mergeThresholdNewGroup: 0
+  mergeThresholdMergingUnconfirmed: 0
+  mergeThresholdMergingConfirmed: 0
+  mergeThresholdMergingConfirmedWithUnconfirmed: 0
+  mergeThresholdMergingUnconfirmedWithNewMasters: 0
+  mergeThresholdMergingConfirmedWithNewMasters: 0
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false

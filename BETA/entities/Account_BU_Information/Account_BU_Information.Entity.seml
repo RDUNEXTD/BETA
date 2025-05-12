@@ -1,0 +1,50 @@
+_package: entities.Account_BU_Information
+_type: Entity
+_name: Account_BU_Information
+label: Account_BU_Information
+pluralLabel: Account_BU_Information
+entityType: FUZZY_MATCHED
+physicalTableName: ACCOUNT_BU_INFORMATION
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: Account_BU_InformationID
+    label: Account_BU_Information ID
+    physicalName: ACCOUNT_BU_INFORMATION_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Account_BU_Information.Account_BU_Information.Account_BU_InformationID
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+matcher:
+  _type: SemQLMatcher
+  description: Account_BU_InformationSemQLMatcher
+  matchRules:
+    - _type: SemQLMatchRule
+      _name: NewRule
+      label: NewRuleLabel
+      condition:
+      matchScore: 100
+      usingMatchOn: false
+  useTransitiveMatchScore: true
+  useMultiIterationGrouping: true
+  mergeThresholdNewGroup: 0
+  mergeThresholdMergingUnconfirmed: 0
+  mergeThresholdMergingConfirmed: 0
+  mergeThresholdMergingConfirmedWithUnconfirmed: 0
+  mergeThresholdMergingUnconfirmedWithNewMasters: 0
+  mergeThresholdMergingConfirmedWithNewMasters: 0
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false

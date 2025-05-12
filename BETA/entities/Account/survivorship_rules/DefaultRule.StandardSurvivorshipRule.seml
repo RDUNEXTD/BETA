@@ -1,0 +1,11 @@
+_package: entities.Account.survivorship_rules
+_type: StandardSurvivorshipRule
+_name: DefaultRule
+entity: entities.Account.Account
+label: Default Rule
+description: ""
+documentation: ""
+defaultRule: true
+consolidationStrategy: CUSTOM_RANKING
+consolidationSkipNulls: false
+overrideStrategy: NO_OVERRIDE

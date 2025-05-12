@@ -1,0 +1,10 @@
+_package: entities.Account_BU_Information.survivorship_rules
+_type: IDSurvivorshipRule
+_name: IdSurvivorshipRule
+entity: entities.Account_BU_Information.Account_BU_Information
+label: Id Survivorship Rule
+description: ""
+documentation: ""
+consolidationStrategy: CUSTOM_RANKING
+consolidationOrderByExpression: ""
+consolidationSkipNulls: false

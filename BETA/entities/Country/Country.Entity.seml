@@ -1,0 +1,26 @@
+_package: entities.Country
+_type: Entity
+_name: Country
+label: Country
+pluralLabel: Country
+entityType: BASIC
+physicalTableName: COUNTRY
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: CountryID
+    label: Country ID
+    physicalName: COUNTRY_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Country.Country.CountryID

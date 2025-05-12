@@ -1,0 +1,26 @@
+_package: entities.Relation_Type
+_type: Entity
+_name: Relation_Type
+label: Relation_Type
+pluralLabel: Relation_Type
+entityType: BASIC
+physicalTableName: RELATION_TYPE
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: Relation_TypeID
+    label: Relation_Type ID
+    physicalName: RELATION_TYPE_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Relation_Type.Relation_Type.Relation_TypeID
